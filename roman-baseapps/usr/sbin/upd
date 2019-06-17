@@ -16,7 +16,7 @@ if
             then freshclam
         fi
     else
-        which .
+        false
     fi
 then
     echo "SYSTEM UPDATE IS DONE"
