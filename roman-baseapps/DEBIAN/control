@@ -1,8 +1,8 @@
 Package: roman-baseapps
-Version: 1.2-2
+Version: 1.3-1
 Section: misc
 Architecture: all
-Depends: bash, mc, htop, dump, aptitude
-Recommends: gparted, wajig, python3
+Depends: bash, mc, htop, dump, aptitude, python3
+Recommends: gparted, wajig
 Maintainer: Roman <kvirikroma@gmail.com>
 Description: Pack of helpful scripts and dependencies.
