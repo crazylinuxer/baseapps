@@ -1,10 +1,10 @@
 #!/bin/bash
 
 repo=$(cat /etc/apt/sources.list | grep deb | grep http | grep -v '#' | grep -m 1 -v 'deb-src')
-repo=$(echo -n $a | cut -c 4-$(echo -n $a | wc -c))
-repo=$(echo -n $a | rev)
-repo=$(echo -n $a | cut -c $(expr index "$a" \/)-$(echo -n $a | wc -c))
-repo=$(echo -n $a | rev)
+repo=$(echo -n $repo | cut -c 4-$(echo -n $repo | wc -c))
+repo=$(echo -n $repo | rev)
+repo=$(echo -n $repo | cut -c $(expr index "$repo" \/)-$(echo -n $repo | wc -c))
+repo=$(echo -n $repo | rev)
 
 if
     if wget -q --spider $repo
