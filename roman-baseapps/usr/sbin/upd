@@ -1,7 +1,13 @@
 #!/bin/bash
 
+repo=$(cat /etc/apt/sources.list | grep deb | grep http | grep -v '#' | grep -m 1 -v 'deb-src')
+repo=$(echo -n $a | cut -c 4-$(echo -n $a | wc -c))
+repo=$(echo -n $a | rev)
+repo=$(echo -n $a | cut -c $(expr index "$a" \/)-$(echo -n $a | wc -c))
+repo=$(echo -n $a | rev)
+
 if
-    if wget -q --spider http://google.com
+    if wget -q --spider $repo
     then
         apt update
         if [[ $1 == "-y" ]]
