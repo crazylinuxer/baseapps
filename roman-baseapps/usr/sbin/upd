@@ -1,0 +1,25 @@
+#!/bin/bash
+
+if
+    if wget -q --spider http://google.com
+    then
+        apt update
+        if [[ $1 == "-y" ]]
+        then
+            apt dist-upgrade -y
+        else
+            apt dist-upgrade
+        fi
+        apt autoremove --purge -y
+        apt autoclean
+        if which freshclam > /dev/null
+            then freshclam
+        fi
+    else
+        which .
+    fi
+then
+    echo "SYSTEM UPDATE IS DONE"
+else
+    echo "Check your internet connection!"
+fi

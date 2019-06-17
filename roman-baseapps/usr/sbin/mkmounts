@@ -1,0 +1,10 @@
+#!/bin/bash
+
+mkdir /mounts
+mkdir /mounts/-temp
+mkdir /mounts/ubuntu
+mkdir /mounts/debian
+mkdir /mounts/1fleha
+mkdir /mounts/2fleha
+mkdir /mounts/cd
+mkdir /mounts/fastfs
