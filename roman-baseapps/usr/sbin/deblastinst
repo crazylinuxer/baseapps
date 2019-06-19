@@ -1,3 +1,9 @@
 #!/bin/bash
 
+if [[ $1 == "-v" ]]
+then
+    echo $(./upd -v)
+    exit
+fi
+
 ls -t /var/lib/dpkg/info/ |grep '\.list$'|sed -e 's/\.list$//'|head -n $1

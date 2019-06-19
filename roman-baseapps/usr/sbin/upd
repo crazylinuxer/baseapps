@@ -1,5 +1,13 @@
 #!/bin/bash
 
+if [[ $1 == "-v" ]]
+then
+    version=$(apt-cache policy roman-baseapps)
+    version=$(python3 ../lib/roman-baseapps/apt-cutter.py $version)
+    echo $version
+    exit
+fi
+
 if test -f /etc/apt/sources.list
 then
     repo=$(cat /etc/apt/sources.list | grep deb | grep http | grep -v '#' | grep -m 1 -v 'deb-src')

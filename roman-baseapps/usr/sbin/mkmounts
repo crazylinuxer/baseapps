@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [[ $1 == "-v" ]]
+then
+    echo $(./upd -v)
+    exit
+fi
+
 mkdir /mounts
 mkdir /mounts/-temp
 mkdir /mounts/ubuntu
@@ -8,3 +14,4 @@ mkdir /mounts/1fleha
 mkdir /mounts/2fleha
 mkdir /mounts/cd
 mkdir /mounts/fastfs
+mkdir /mounts/ntfs
