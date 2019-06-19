@@ -2,7 +2,7 @@
 
 if [[ $1 == "-v" ]]
 then
-    echo $(./upd -v)
+    echo $(upd -v)
     exit
 fi
 

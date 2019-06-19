@@ -1,5 +1,5 @@
 Package: roman-baseapps
-Version: 1.3-2
+Version: 1.4-1
 Section: misc
 Architecture: all
 Depends: bash, mc, htop, dump, aptitude, python3

@@ -3,7 +3,7 @@
 if [[ $1 == "-v" ]]
 then
     version=$(apt-cache policy roman-baseapps)
-    version=$(python3 ../lib/roman-baseapps/apt-cutter.py $version)
+    version=$(python3 /usr/lib/roman-baseapps/apt-cutter.py $version)
     echo $version
     exit
 fi
