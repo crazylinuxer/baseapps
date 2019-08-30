@@ -6,12 +6,12 @@ then
     exit
 fi
 
-mkdir /mounts
-mkdir /mounts/-temp
-mkdir /mounts/ubuntu
-mkdir /mounts/debian
-mkdir /mounts/1fleha
-mkdir /mounts/2fleha
-mkdir /mounts/cd
-mkdir /mounts/fastfs
-mkdir /mounts/ntfs
+mkdir -p /mounts
+mkdir -p /mounts/-temp
+mkdir -p /mounts/ubuntu
+mkdir -p /mounts/debian
+mkdir -p /mounts/1fleha
+mkdir -p /mounts/2fleha
+mkdir -p /mounts/cd
+mkdir -p /mounts/fastfs
+mkdir -p /mounts/ntfs
