@@ -2,8 +2,8 @@
 
 if [[ $1 == "-v" ]]
 then
-    version=$(apt-cache policy roman-baseapps)
-    version=$(python3 /usr/lib/roman-baseapps/apt-cutter.py $version)
+    version=$(apt-cache policy useful-package)
+    version=$(python3 /usr/lib/useful-package/apt-cutter.py $version)
     echo $version
     exit
 fi
@@ -20,7 +20,7 @@ elif test -f /etc/apt/sources.list.d/official-package-repositories.list
 then
     repo=$(cat /etc/apt/sources.list.d/official-package-repositories.list | grep deb | grep http | grep -v '#' | grep -m 3 -v 'deb-src')
     repo=$(echo -n $repo | cut -c 10-$(echo -n $repo | wc -c))
-    repo=$(python3 ../lib/roman-baseapps/repo.py $repo)
+    repo=$(python3 ../lib/useful-package/repo.py $repo)
     repo=$(echo -n $repo | rev)
     repo=$(echo -n $repo | cut -c $(expr index "$repo" \/)-$(echo -n $repo | wc -c))
     repo=$(echo -n $repo | rev)
