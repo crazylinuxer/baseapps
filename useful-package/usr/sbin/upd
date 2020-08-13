@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 if [[ $1 == "-v" ]]
 then
     version=$(apt-cache policy useful-package)
@@ -7,6 +8,14 @@ then
     echo $version
     exit
 fi
+
+
+if [[ $(whoami) != "root" ]]
+then
+    sudo upd $1
+    exit
+fi
+
 
 if test -f /etc/apt/sources.list
 then

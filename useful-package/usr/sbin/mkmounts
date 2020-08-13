@@ -1,10 +1,12 @@
 #!/bin/bash
 
+
 if [[ $1 == "-v" ]]
 then
     echo $(upd -v)
     exit
 fi
+
 
 mkdir -p /mounts
 mkdir -p /mounts/-temp

@@ -6,6 +6,12 @@ then
     exit
 fi
 
+if [[ $(whoami) != "root" ]]
+then
+    sudo upd $1
+    exit
+fi
+
 if [ -z $1 ]
 then
     echo "Error: To few arguments!"
